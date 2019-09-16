@@ -1,7 +1,0 @@
-{
-	"name": "cranegateir",
-	"properties": {
-		"type": "SelfHosted",
-		"description": "local gateway for crane files"
-	}
-}
