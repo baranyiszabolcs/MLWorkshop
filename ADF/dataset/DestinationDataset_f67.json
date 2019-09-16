@@ -1,0 +1,77 @@
+{
+	"name": "DestinationDataset_f67",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "demodataOutBlob",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"cw_folderPath": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "FlightsAndWeather.csv",
+				"folderPath": {
+					"value": "@dataset().cw_folderPath",
+					"type": "Expression"
+				},
+				"container": "sparkcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "OriginAirportCode",
+				"type": "String"
+			},
+			{
+				"name": "Month",
+				"type": "String"
+			},
+			{
+				"name": "DayofMonth",
+				"type": "String"
+			},
+			{
+				"name": "CRSDepHour",
+				"type": "String"
+			},
+			{
+				"name": "DayOfWeek",
+				"type": "String"
+			},
+			{
+				"name": "Carrier",
+				"type": "String"
+			},
+			{
+				"name": "DestAirportCode",
+				"type": "String"
+			},
+			{
+				"name": "DepDel15",
+				"type": "String"
+			},
+			{
+				"name": "WindSpeed",
+				"type": "String"
+			},
+			{
+				"name": "SeaLevelPressure",
+				"type": "String"
+			},
+			{
+				"name": "HourlyPrecip",
+				"type": "String"
+			}
+		]
+	}
+}
